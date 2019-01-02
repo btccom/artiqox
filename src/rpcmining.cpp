@@ -884,7 +884,7 @@ Value getauxblock(const Array& params, bool fHelp)
             vNewBlockTemplate.push_back(pblocktemplate);
         }
 
-        uint256 hashTarget = CBigNum().SetCompact(pblock->nBits).getuint256();
+        uint256 target = CBigNum().SetCompact(pblock->nBits).getuint256();
 
         Object result;
         result.push_back(Pair("hash", pblock->GetHash().GetHex()));
